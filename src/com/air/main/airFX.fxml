@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:id="mainAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" styleClass="background"
+            fx:controller="com.air.video.UI">
+    <children>
+        <BorderPane fx:id="mainBorder" prefHeight="500.0" prefWidth="1000.0" styleClass="background"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
+            <center>
+                <StackPane fx:id="mediaView" prefHeight="150.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fx:id="onScreenPlay" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@assets/9-av-play-over-video.png" preserveRatio="false" smooth="false"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </StackPane>
+            </center>
+            <bottom>
+                <BorderPane fx:id="footer" prefHeight="38.0" prefWidth="200.0">
+                    <bottom>
+                        <BorderPane prefHeight="38.0" prefWidth="1000.0" styleClass="tt">
+                            <center>
+                                <StackPane fx:id="progressPane" prefHeight="38.0" prefWidth="850.0">
+                                    <children>
+                                        <Slider fx:id="seek" maxHeight="4.0" minHeight="4.0" prefHeight="4.0">
+                                            <effect>
+                                                <Bloom threshold="0.5"/>
+                                            </effect>
+                                        </Slider>
+                                    </children>
+                                </StackPane>
+                            </center>
+                            <left>
+                                <StackPane fx:id="timePane" prefHeight="38.0" prefWidth="135.0">
+                                    <children>
+                                        <Label id="time" fx:id="timeIn" alignment="CENTER" text="00 / 00"
+                                               textFill="WHITE">
+                                            <effect>
+                                                <Bloom/>
+                                            </effect>
+                                            <font>
+                                                <Font name="Ubuntu" size="13.0" fx:id="x1"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </StackPane>
+                            </left>
+                            <right>
+                                <StackPane prefHeight="25.0" prefWidth="148.0">
+                                    <children>
+                                        <BorderPane fx:id="rightControl" prefHeight="38.0" prefWidth="162.0">
+                                            <center>
+                                                <StackPane fx:id="volPane" prefHeight="38.0"
+                                                           prefWidth="102.99990000000253">
+                                                    <children>
+                                                        <Slider fx:id="volSLider" maxHeight="4.0" maxWidth="100.0"
+                                                                minHeight="4.0" prefHeight="4.0" value="50.0">
+                                                            <effect>
+                                                                <Bloom threshold="0.5"/>
+                                                            </effect>
+                                                        </Slider>
+                                                    </children>
+                                                </StackPane>
+                                            </center>
+                                            <right>
+                                                <StackPane id="fullBt" fx:id="fullScreenPane" prefHeight="25.0"
+                                                           prefWidth="44.0001220703125">
+                                                    <children>
+                                                        <ImageView id="playBt" fx:id="fullBt" fitHeight="25.0"
+                                                                   fitWidth="25.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <effect>
+                                                                <Bloom/>
+                                                            </effect>
+                                                            <image>
+                                                                <Image url="@assets/9-av-return-from-full-screen.png"
+                                                                       preserveRatio="false" smooth="false"/>
+                                                            </image>
+                                                        </ImageView>
+                                                    </children>
+                                                </StackPane>
+                                            </right>
+                                        </BorderPane>
+                                    </children>
+                                </StackPane>
+                            </right>
+                        </BorderPane>
+                    </bottom>
+                    <center>
+                        <StackPane minHeight="25.0" prefHeight="58.0" prefWidth="1000.0">
+                            <children>
+                                <ImageView fx:id="ppBt" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <effect>
+                                        <Bloom/>
+                                    </effect>
+                                    <image>
+                                        <Image url="@assets/9-av-play-over-video.png" preserveRatio="false"
+                                               smooth="false"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </StackPane>
+                    </center>
+                </BorderPane>
+            </bottom>
+
+            <top>
+                <BorderPane fx:id="header" prefHeight="38.0" prefWidth="1000.0" styleClass="tt">
+                    <center>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                            <children>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                    <center>
+                                        <BorderPane fx:id="menuPane" prefHeight="200.0" prefWidth="200.0">
+                                            <center>
+                                                <StackPane fx:id="menuuPane" prefHeight="150.0" prefWidth="200.0">
+                                                    <children>
+                                                        <BorderPane fx:id="mm" prefHeight="200.0" prefWidth="200.0">
+                                                            <center>
+                                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                                    <children>
+                                                                        <Label fx:id="menuL" alignment="CENTER"
+                                                                               contentDisplay="CENTER" font="$x1"
+                                                                               text="Menu" textFill="WHITE">
+                                                                            <effect>
+                                                                                <Bloom/>
+                                                                            </effect>
+                                                                        </Label>
+                                                                    </children>
+                                                                </StackPane>
+                                                            </center>
+                                                        </BorderPane>
+                                                    </children>
+                                                </StackPane>
+                                            </center>
+                                            <left>
+                                                <ImageView fx:id="d1" fitHeight="6.0" fitWidth="111.0"
+                                                           pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@assets/d2.gif" preserveRatio="false"
+                                                               smooth="false"/>
+                                                    </image>
+                                                </ImageView>
+                                            </left>
+                                            <right>
+                                                <ImageView fx:id="d2" fitHeight="6.0" fitWidth="111.0"
+                                                           pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@assets/d1.gif" preserveRatio="false"
+                                                               smooth="false"/>
+                                                    </image>
+                                                </ImageView>
+                                            </right>
+                                        </BorderPane>
+                                    </center>
+                                    <left>
+                                        <Pane prefHeight="0.0" prefWidth="50.0"/>
+                                    </left>
+                                    <right>
+                                        <Pane prefHeight="0.0" prefWidth="50.0"/>
+                                    </right>
+                                </BorderPane>
+                            </children>
+                        </StackPane>
+                    </center>
+                    <left>
+                        <StackPane prefHeight="38.0" prefWidth="169.0">
+                            <children>
+                                <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" text="Air - Media Title"
+                                       textFill="WHITE">
+                                    <effect>
+                                        <Bloom/>
+                                    </effect>
+                                    <font>
+                                        <Font name="Ubuntu" size="18.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </StackPane>
+                    </left>
+                    <right>
+                        <BorderPane fx:id="userControl" prefHeight="38.0" prefWidth="81.0">
+                            <left>
+                                <StackPane fx:id="starPane" prefHeight="38.0" prefWidth="57.0">
+                                    <children>
+                                        <ImageView id="onScreenPlay" fx:id="starBt" fitHeight="25.0" fitWidth="25.0"
+                                                   pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@assets/3_rating_half_important.png" preserveRatio="false"
+                                                       smooth="false"/>
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </StackPane>
+                            </left>
+                            <right>
+                                <ImageView fx:id="avatar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@av/avatar.png" preserveRatio="false" smooth="false"/>
+                                    </image>
+                                </ImageView>
+                            </right>
+                        </BorderPane>
+                    </right>
+                </BorderPane>
+            </top>
+        </BorderPane>
+    </children>
+    <stylesheets>
+        <URL value="@s.css"/>
+    </stylesheets>
+</AnchorPane>

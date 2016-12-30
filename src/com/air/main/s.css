@@ -1,0 +1,22 @@
+.background {
+	-fx-background-image: url("bg.jpg");
+	-fx-background-color: linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+					      linear-gradient(#20262b, #191d22),
+					      radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+}
+
+.tt {
+	-fx-background-image: url("assets/tt.jpg");
+	-fx-background-color: linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+					      linear-gradient(#20262b, #191d22),
+					      radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+}
+
+.scrollBar {
+	-fx-base: url("");
+	-fx-background: url("");
+}
+
+.whiteBg {
+	-fx-background-color: #FFF;
+}
